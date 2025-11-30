@@ -1,4 +1,4 @@
-public class TwoSumApproach {
+public class TwoPointerApproach {
     public static int removeDuplicates(int[] nums) {
         if(nums == null || nums.length == 0) return 0;
 
