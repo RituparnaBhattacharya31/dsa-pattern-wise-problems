@@ -1,17 +1,30 @@
+
+import java.util.Arrays;
+
+
 public class TwoPointerApproach {
+
     public static int[] twoSumSortedArray(int[] nums, int target) {
-        int j = 0;
-        for(int i = 1; i < nums.length; i++) {
-            if(nums[i] + nums[j] == target) {
-                return new int[] {j+1, i+1};
-            }
-            j++;
+        if (nums == null || nums.length <= 1) {
+            return new int[]{-1, -1};
         }
-        return new int[] {-1, -1};
+        int left = 0, right = nums.length - 1;
+
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            if (sum == target) {
+                return new int[]{left + 1, right + 1};
+            } else if (sum > target) {
+                right--;
+            } else if (sum < target) {
+                left++;
+            }
+        }
+        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{2,7,11,15};
-        System.out.println("Found indeces are : " + twoSumSortedArray(arr, 18));
+        int[] arr = new int[]{2, 7, 11, 15};
+        System.out.println("Found indeces are : " + Arrays.toString(twoSumSortedArray(arr, 18)));
     }
 }
