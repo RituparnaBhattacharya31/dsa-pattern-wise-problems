@@ -13,12 +13,11 @@ public class BruteForceApproach {
             }
         }
         int j = 0;
-        int[] newArray = new int[k];
         while(j < k) {
-            newArray[j] = updatedArray[j];
+            nums[j] = updatedArray[j];
             j++;
         }
-        return newArray.length;
+        return k;
     }
 
     public static void main(String[] args) {
