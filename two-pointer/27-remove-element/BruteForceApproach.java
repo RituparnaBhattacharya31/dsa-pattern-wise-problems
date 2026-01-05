@@ -1,6 +1,4 @@
 
-
-
 public class BruteForceApproach {
 
     public static int removeElement(int[] nums, int ele) {
@@ -13,7 +11,7 @@ public class BruteForceApproach {
             }
         }
         int j = 0;
-        while(j < k) {
+        while (j < k) {
             nums[j] = updatedArray[j];
             j++;
         }

@@ -1,7 +1,6 @@
 
 import java.util.Arrays;
 
-
 public class BruteForceApproach {
 
     public static int[] twoSumSortedArray(int[] nums, int target) {
@@ -12,7 +11,7 @@ public class BruteForceApproach {
                 }
             }
         }
-        return new int[0];
+        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
